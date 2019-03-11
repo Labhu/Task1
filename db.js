@@ -1,4 +1,5 @@
 var mongoose =require ('mongoose');
 
 mongoose.Promise= global.Promise;
-mongoose.connect('mongodb://localhost:27017/Database');
+mongoose.connect('mongodb://localhost:27017/Database', { useNewUrlParser: true } );
+mongoose.set('useCreateIndex', true);
